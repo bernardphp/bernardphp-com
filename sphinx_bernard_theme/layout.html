@@ -30,8 +30,16 @@
         {%- endfor %}
 
         <script type="text/javascript">
-            DOCUMENTATION_OPTIONS = {};
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '{{ url_root }}',
+             VERSION:     '{{ release|e }}',
+             COLLAPSE_INDEX: false,
+             FILE_SUFFIX: '{{ '' if no_search_suffix else file_suffix }}',
+             HAS_SOURCE:  {{ has_source|lower }}
+        };
         </script>
+
+        {% block extrahead %}{% endblock %}
     </head>
 
     <body>
@@ -48,7 +56,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 toc">
-                    {{ toctree(maxdepth=2, collapse=False, includehidden=True) }}
+                    {% set toctree =  toctree(maxdepth=2, collapse=False, includehidden=True) %}
+
+                    {% if toctree %}
+                        {{ toctree }}
+                    {% else %}
+                        {{ toc }}
+                    {% endif %}
 
                     <a href="#" class="navbar-toggle">
                         <span class="sr-only">Toggle navigation</span>
