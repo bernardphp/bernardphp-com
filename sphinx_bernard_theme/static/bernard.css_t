@@ -16,8 +16,11 @@ h1{font-size:50px;margin:10px 0}
 .ribbon a{background:url('img/fork-me.png');width:140px;height:140px;display:block;text-indent:-99999px;}
 
 .headerlink{display:none;}
+.lead{font-size:34px}
+.btn-bernard{background:#ffaa00;color:#fff;}
 
 @media (max-width: 768px) {
+    .ribbon{display:none}
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
