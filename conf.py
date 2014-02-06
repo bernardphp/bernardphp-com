@@ -9,6 +9,8 @@ master_doc = 'index'
 
 templates_path = ['_templates']
 
+exclude_patterns = ['demo', 'README.rst']
+
 html_additional_pages = {
     'index' : 'index.html'
 }
