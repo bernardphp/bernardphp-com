@@ -2,8 +2,10 @@ include *.txt
 include LICENSE
 recursive-include sphinx_bernard_theme *.conf
 recursive-include sphinx_bernard_theme *.css
+recursive-include sphinx_bernard_theme *.css_t
 recursive-include sphinx_bernard_theme *.eot
 recursive-include sphinx_bernard_theme *.html
+recursive-include sphinx_bernard_theme *.png
 recursive-include sphinx_bernard_theme *.js
 recursive-include sphinx_bernard_theme *.svg
 recursive-include sphinx_bernard_theme *.ttf
