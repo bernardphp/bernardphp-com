@@ -1,26 +1,33 @@
+{%- block doctype -%}
 <!DOCTYPE html>
+{%- endblock -%}
+{%- set url_root = pathto('', 1) %}
+{%- set titlesuffix = '' %}
+{%- if not embedded and docstitle %}
+    {%- set titlesuffix = ' &mdash; '|safe + docstitle|e %}
+{%- endif %}
 <html>
     <head>
-        {% block htmltitle %}
-            <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
-        {% endblock %}
+        {%- block htmltitle %}
+        <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
+        {%- endblock %}
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-        {% if favicon %}
-            <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}" />
-        {% else %}
-            <link rel="shortcut icon" href="{{ pathto('_static/favicon.ico', 1) }}" />
-        {% endif %}
+        {%- if favicon %}
+        <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}" />
+        {%- else %}
+        <link rel="shortcut icon" href="{{ pathto('_static/favicon.ico', 1) }}" />
+        {%- endif %}
 
         <link rel="stylesheet" href="{{ pathto('_static/bootstrap/css/bootstrap.min.css', 1) }}" type="text/css" />
         <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
         <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
 
-        {% for cssfile in css_files %}
-            <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
-        {% endfor %}
+        {%- for cssfile in css_files %}
+        <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
+        {%- endfor %}
     </head>
 
     <body>
@@ -37,36 +44,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 toc">
-                    {% set toctree = toctree(maxdepth=2, collapse=False, includehidden=True) %}
-
-                    {% if toctree %}
-                        {{ toctree }}
-                    {% else %}
-                        {{ toc }}
-                    {% endif %}
-
-                    {#
-                    <ul class="toc nav">
-                        <li><strong>Getting Started</strong></li>
-                        <li><a href="#">Welcome</a></li>
-                        <li><a href="#">Benefits</a></li>
-                        <li><a href="#">Features</a></li>
-                        <li><a href="#">License</a></li>
-
-                        <li><strong>Customizing</strong></li>
-                        <li><a href="#">View Type</a></li>
-                        <li class="active"><a href="#">Animation Styles</a></li>
-                        <li><a href="#">Bars Text</a></li>
-                        <li><a href="#">Vote Counter</a></li>
-                        <li><a href="#">Rating Icons</a></li>
-                        <li><a href="#">Rating Titles</a></li>
-                    </ul>#}
+                    {{ toctree(maxdepth=2, collapse=False, includehidden=True) }}
                 </div>
 
                 <div class="col-md-9 body">
                     {% block body %}{% endblock %}
-
-                    {#% include "breadcrumbs.html" %#}
                 </div>
 
                 <div class="container">
