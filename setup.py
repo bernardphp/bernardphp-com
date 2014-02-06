@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='sphinx_bernard_theme',
-    version='0.1.4',
+    version='0.1.5',
     url='https://github.com/bernardphp/bernardphp-com/',
     license='MIT',
     author='Henrk Bjornskov',
