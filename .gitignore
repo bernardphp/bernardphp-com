@@ -1,3 +1,5 @@
+.DS_Store
 _build
 build
+dist
 sphinx_bernard_theme.egg-info
