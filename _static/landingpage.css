@@ -1,3 +1,5 @@
+#carbonads-container{margin-top:25px;float:right;width:300px;}
+
 body{background:#f9f6f1}
 h1,h2,h3,h4,h5,h6{font-family:'Alegreya',serif;font-weight:700;color:#4e2806}
 
@@ -6,4 +8,15 @@ h1,h2,h3,h4,h5,h6{font-family:'Alegreya',serif;font-weight:700;color:#4e2806}
 
 .carbonad{border:1px solid #ff7200 !important}
 
-#carbonads-container{margin:0;float:right;width:300px;}
+.ribbon{position: absolute;top:0;right:0;border:0;z-index:2000;}
+.ribbon a{background:url('img/fork-me.png');width:140px;height:140px;display:block;text-indent:-99999px;}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .ribbon a{background:url('img/fork-me@2x.png');background-size:140px 140px}
+}
+
+
+@media (max-width:991px) {
+    #carbonads-container{float:none;margin:25px auto 0 auto}
+    .ribbon{display:none}
+}
