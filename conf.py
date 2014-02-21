@@ -11,6 +11,7 @@ templates_path = ['_templates']
 
 exclude_patterns = ['demo', 'README.rst']
 
+html_static_path = ['_static']
 html_additional_pages = {
     'index' : 'index.html'
 }

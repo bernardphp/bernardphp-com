@@ -1,37 +1,89 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Bernard</title>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Easy, Extensible background processing for PHP - Bernard</title>
 
-        <link rel="stylesheet" href="{{ pathto('_static/bootstrap/css/bootstrap.min.css', 1) }}" />
-        <link rel="stylesheet" href="{{ pathto('_static/bernard.css', 1) }}" />
+    <link href="http://fonts.googleapis.com/css?family=Alegreya:400,700" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ pathto('_static/bootstrap/css/bootstrap.min.css', 1) }}" />
+    <link rel="stylesheet" href="{{ pathto('_static/landingpage.css', 1) }}" />
 
-        <link rel="shortcut icon" href="{{ pathto('_static/favicon.ico', 1) }}" />
-    </head>
+    <link rel="shortcut icon" href="{{ pathto('_static/favicon.ico', 1) }}" />
+</head>
 
-    <body>
-        <div class="ribbon">
-            <a href="https://github.com/bernardphp/bernard">Fork me on GitHub!</a>
-        </div>
-
-        <div class="container text-center">
-            <a class="logo logo-large" href="{{ pathto(master_doc) }}">Bernard</a>
-        </div>
-
-        <hr />
-
+<body>
+    <div class="jumbotron">
         <div class="container">
-            <p class="col-md-offset-1 col-md-10 lead text-center">Helps <strong>you</strong> write distributed and service orientated systems by offloading work to the background via message queues.</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Bernard</h1>
+                    <p>Our collection of PHP libraries makes it super easy and enjoyable to do background processing in any application.</p>
+                </div>
 
-            <div class="text-center">
-                <a href="http://bernardphp.com/docs/bernard" class="btn btn-lg btn-bernard">Documentation</a>
-                <a href="http://bernardphp.com/docs/chute" class="btn btn-lg btn-bernard">Chute</a>
-                <a href="http://bernardphp.com/docs/juno" class="btn btn-lg btn-bernard">Juno</a>
+                <div class="col-md-6">
+                    <div style="margin-top:25px" id="carbonads-container">
+                        <div class="carbonad">
+                            <div id="azcarbon"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 
-    </body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="text-center">
+                    <a href="/docs/bernard">
+                        <img src="http://bernardphp.com/docs/chute/_static/img/logo_small@2x.png" height="100" />
+                    </a>
+                </div>
+
+                <h3>Bernard</h3>
+
+                <p>Bernard is there to help you utilize background processing in an unobtrusive way while still being
+                extensible and easy to use.</p>
+
+                <p>We support a variety of drivers including but not limited to Google AppEngine, Amazon SQS, Redis and Beanstalk
+                (see the full list in our documentation).</p>
+            </div>
+
+            <div class="col-md-4">
+                <div class="text-center">
+                    <a href="/docs/juno">
+                        <img src="http://i.imgur.com/2x0zC5c.png" height="100" width="100" class="img-circle" />
+                    </a>
+                </div>
+
+                <h3>Juno</h3>
+
+                <p>What good is a message queue without any information? That is why we created Juno. It
+                shows information about queues, consumer, messages and much more.</p>
+
+                <p>We build it on top of AngularJS and Silex to make it extensible and modular.
+                Also did we mention you can embed it into your application with StackPHP?</p>
+            </div>
+
+            <div class="col-md-4">
+                <div class="text-center">
+                    <a href="/docs/chute">
+                        <img src="https://github.com/bernardphp/chute/raw/master/doc/logo.png" height="100" />
+                    </a>
+                </div>
+
+                <h3>Chute</h3>
+                <p>Makes it easy for you to not invest in Hadoop and keep your quick development cycles by enabling MapReduce with PHP iterators.</p>
+                <p>With a simple interface it has a lot of powerful possibilities.</p>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <script type="text/javascript">var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "http://engine.carbonads.com/z/57936/azcarbon_2_1_0_HORIZ"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+</body>
 </html>
