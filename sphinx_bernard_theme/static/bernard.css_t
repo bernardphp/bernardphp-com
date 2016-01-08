@@ -43,3 +43,44 @@ h1{font-size:50px;margin:10px 0}
     .logo-large{background:url('img/logo@2x.png');background-size:450px 285px}
     .ribbon a{background:url('img/fork-me@2x.png');background-size:140px 140px}
 }
+
+.admonition.note, .admonition.attention, .admonition.caution, .admonition.danger, .admonition.error, .admonition.hint,
+.admonition.important, .admonition.tip, .admonition.warning, .admonition.seealso, .admonition.admonition-todo {
+    padding: 12px;
+    line-height: 24px;
+    margin-bottom: 24px;
+    background: #e7f2fa;
+}
+
+.body .admonition-title {
+    color: #fff;
+    font-weight: bold;
+    display: block;
+    margin: -12px -12px 12px -12px;
+    padding: 6px 12px;
+}
+
+.admonition.note .admonition-title, .admonition.hint .admonition-title, .admonition.tip .admonition-title,
+.admonition.seealso .admonition-title, .admonition.admonition-todo .admonition-title {
+    background: #6ab0de;
+}
+
+.admonition.attention .admonition-title, .admonition.danger .admonition-title, .admonition.error .admonition-title {
+    background: #f29f97;
+}
+
+.admonition.caution .admonition-title, .admonition.important .admonition-title, .admonition.warning .admonition-title {
+    background: #f0b37e;
+}
+
+.admonition.note, .admonition.hint, .admonition.tip {
+    background: #e7f2fa;
+}
+
+.admonition.caution, .admonition.important, .admonition.warning {
+    background: #ffedcc;
+}
+
+.admonition.attention,  .admonition.danger, .admonition.error {
+    background: #f2dede;
+}
